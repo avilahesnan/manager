@@ -1,13 +1,12 @@
-{% include 'tasks/partials/head.html' %}
-<body>
-    {% include 'tasks/partials/header.html' %}
-    {% include 'tasks/partials/search.html' %}
+{% extends 'global/base.html' %}
 
-    <main class="main-content-container">
-        <div class="main-content main-content-list container">
-            {% include 'tasks/partials/task.html' %}
-        </div>
-    </main>
-    {% include 'tasks/partials/footer.html' %}
-</body>
-</html>
+{% block content %}
+<div class="main-content main-content-list container">
+    {% include 'tasks/partials/task.html' %}
+    {% include 'tasks/partials/task.html' %}
+    {% include 'tasks/partials/task.html' %}
+    {% include 'tasks/partials/task.html' %}
+    {% include 'tasks/partials/task.html' %}
+    {% include 'tasks/partials/task.html' %}
+</div>
+{% endblock content %}

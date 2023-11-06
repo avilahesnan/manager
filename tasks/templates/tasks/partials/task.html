@@ -3,7 +3,9 @@
         <img src="https://placehold.co/1280x780.png/#269fe6" alt="task">
     </div>
     <div class="task-name-container">
-        <h2 class="task-name">tasks</h2>
+        <a href="{% url 'tasks:task' 1 %}">
+            <h2 class="task-name">task</h2>
+        </a>
     </div>
     <div class="task-author">
         <span class="task-author-item"><i class="fa-solid fa-book"></i>
@@ -14,7 +16,13 @@
         </span>
     </div>
     <div class="task-subject">
-        <p>skafkfndnfkjad bdkgnajdngadkgnad  fnkajnfkafakfka</p>
+        <a href="{% url 'tasks:task' 1 %}">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt distinctio, recusandae quibusdam autem
+                fuga voluptas voluptatem dolores rem eius veritatis doloribus beatae? Exercitationem veniam quasi modi,
+                itaque blanditiis repudiandae!
+            </p>
+        </a>
     </div>
     <div class="task-meta-container">
         <div class="task-meta task-term">
@@ -36,10 +44,15 @@
             {% endcomment %}
         </div>
     </div>
-    <footer class="task-footer">
-        <a href="" class="task-description button button-dark button-full-width">
-            <i class="fa-solid fa-eye"></i>
-            <span>Description</span>
-        </a>
-    </footer>
+    {% if is_detail_page is not True %}
+        <footer class="task-footer">
+            <a href="#" class="button button-dark button-full-width">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span>Edit</span>
+            </a>
+        </footer>
+    {% endif %}
+    {% if is_detail_page is True %}
+        <div class="task-description"></div>
+    {% endif %}
 </div>
