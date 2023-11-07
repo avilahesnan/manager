@@ -163,7 +163,7 @@ h6 {
 
 .task-list-item {
     max-width: 40rem;
-    max-height: 60rem;
+    max-height: 55rem;
 }
 
 .task-list-item a {
@@ -181,6 +181,13 @@ h6 {
     padding-bottom: 1.5rem;
 }
 
+.task-name {
+    max-width: 36rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .task-author {
     padding: 0 var(--spacing-gutter-medium);
 }
@@ -195,8 +202,13 @@ h6 {
 .task-subject {
     padding: var(--spacing-gutter-medium);
     padding-top: 1.5rem;
-    max-height: 10rem;
+}
+
+.text-subject {
+    max-width: 36rem;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .task-meta-container {
@@ -244,6 +256,20 @@ h6 {
 .main-content-detail .task-list-item:hover {
     transform: scale(1);
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.main-content-detail .task-name {
+    max-width: none;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+}
+
+.main-content-detail .text-subject {
+    max-width: none;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
 }
 
 .task-description {
