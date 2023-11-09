@@ -1,4 +1,9 @@
-{% include 'tasks/partials/head.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'tasks/partials/head.html' %}
+    <title>{% block title %}{% endblock title %} Tasks</title>
+</head>
 <body>
     {% include 'tasks/partials/header.html' %}
     {% include 'tasks/partials/search.html' %}
