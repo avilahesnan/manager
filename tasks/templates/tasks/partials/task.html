@@ -1,6 +1,6 @@
 <div class="task task-list-item">
     <div class="task-cover">
-        <img src="https://placehold.co/1280x780.png/#269fe6" alt="task">
+        <img src="{{ task.cover.url }}" alt="task">
     </div>
     <div class="task-name-container">
         <a href="{% url 'tasks:task' task.id %}">

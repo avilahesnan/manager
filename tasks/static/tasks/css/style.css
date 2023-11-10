@@ -158,12 +158,11 @@ h6 {
 
 .task img {
     max-width: 100%;
-
 }
 
 .task-list-item {
     max-width: 40rem;
-    max-height: 55rem;
+    max-height: 57rem;
 }
 
 .task-list-item a {
