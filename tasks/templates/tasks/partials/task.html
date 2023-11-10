@@ -3,24 +3,22 @@
         <img src="https://placehold.co/1280x780.png/#269fe6" alt="task">
     </div>
     <div class="task-name-container">
-        <a href="{% url 'tasks:task' 1 %}">
-            <h2 class="task-name">taskLorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt distinctio</h2>
+        <a href="{% url 'tasks:task' task.id %}">
+            <h2 class="task-name">{{ task.name }}</h2>
         </a>
     </div>
     <div class="task-discipline">
         <span class="task-discipline-item"><i class="fa-solid fa-book"></i>
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            {{ task.category }}
         </span>
         <span class="task-discipline-item"><i class="fa-solid fa-calendar-days"></i>
-            11/05/2023
+            {{ task.created_at|date:"d/m/Y" }}
         </span>
     </div>
     <div class="task-subject">
-        <a href="{% url 'tasks:task' 1 %}">
+        <a href="{% url 'tasks:task' task.id %}">
             <p class="text-subject">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt distinctio, recusandae quibusdam autem
-                fuga voluptas voluptatem dolores rem eius veritatis doloribus beatae? Exercitationem veniam quasi modi,
-                itaque blanditiis repudiandae!
+                {{ task.subject }}
             </p>
         </a>
     </div>
@@ -28,7 +26,7 @@
         <div class="task-meta task-term">
             <h3 class="task-meta-title"><i class="fa-solid fa-calendar-days icon"></i>Term</h3>
             <div class="task-meta-text">
-                11/05/2023
+                {{ task.term|date:"d/m/Y" }}
             </div>
         </div>
         <div class="task-meta task-completed">
@@ -55,9 +53,7 @@
     {% if is_detail_page is True %}
         <div class="task-description">
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt distinctio, recusandae quibusdam autem
-                fuga voluptas voluptatem dolores rem eius veritatis doloribus beatae? Exercitationem veniam quasi modi,
-                itaque blanditiis repudiandae!
+                {{ task.description }}
             </p>
         </div>
     {% endif %}

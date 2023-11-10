@@ -12,7 +12,7 @@ class Task(models.Model):
     name = models.CharField(max_length=50)
     subject = models.CharField(max_length=70)
     description = models.TextField()
-    term = models.DateTimeField()
+    term = models.DateField()
     is_completed = models.BooleanField(default=False)
     slug = models.SlugField()
     cover = models.ImageField(upload_to='tasks/covers/%Y/%m/%d/')
