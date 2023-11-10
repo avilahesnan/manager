@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from datetime import datetime, timedelta
 from .models import Task
 
@@ -26,7 +26,7 @@ def index(request):
 
 
 def task(request, id):
-    task = Task.objects.get(id=id)
+    task = get_object_or_404(Task, id=id)
 
     return render(request, 'tasks/pages/task-view.html', context={
         'is_detail_page': True,

@@ -1,6 +1,6 @@
 {% extends 'global/base.html' %}
 
-{% block title %}Task | {% endblock title%}
+{% block title %}{{ task.name}} | {% endblock title%}
 {% block content %}
 <div class="main-content main-content-detail container">
     {% include 'tasks/partials/task.html' %}

@@ -15,7 +15,7 @@ class Task(models.Model):
     term = models.DateField()
     is_completed = models.BooleanField(default=False)
     slug = models.SlugField()
-    cover = models.ImageField(upload_to='tasks/covers/%Y/%m/%d/')
+    cover = models.ImageField(upload_to='tasks/covers/%Y/%m/%d/', blank=True, default='tasks/task-img.jpg')
     days_to_alert = models.IntegerField(default=7)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
