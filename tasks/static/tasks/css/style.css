@@ -137,6 +137,9 @@ h6 {
     color: var(--color-primary);
 }
 
+.space {
+    padding: var(--spacing-gutter-medium);
+}
 .main-content {
     padding-top: 0;
 }
@@ -187,11 +190,11 @@ h6 {
     white-space: nowrap;
 }
 
-.task-discipline {
+.task-category {
     padding: 0 var(--spacing-gutter-medium);
 }
 
-.task-discipline-item {
+.task-category-item {
     color: var(--color-gray-4);
     margin-right: 1rem;
     font-style: italic;
